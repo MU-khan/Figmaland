@@ -1,0 +1,105 @@
+@mixin flexible {
+  display: flex;
+  align-items: center;
+}
+
+@font-face {
+  font-family: changa;
+  src: url(../fonts/Changa-VariableFont_wght.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+#head {
+  width: 100%;
+  height: 930px;
+  padding: 15px;
+  padding-left: 40px;
+  background-image: url(../images/header-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  // justify-content: center;
+  // align-items: center;
+  flex-direction: column;
+
+  .navbar {
+    width: 100%;
+    height: 80px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .navbar_left {
+      width: 60%;
+      @include flexible;
+      justify-content: space-evenly;
+    }
+
+    .head_menu {
+      width: 50%;
+      @include flexible;
+      justify-content: space-around;
+
+      & a {
+        color: #fff;
+        font-family: changa;
+        font-size: 16px;
+      }
+    }
+
+    & .head_social {
+      width: 30%;
+      @include flexible;
+      padding-right: 20px;
+
+      & li {
+        padding-right: 30px;
+      }
+    }
+  }
+
+  .head_content {
+    @include flexible;
+    justify-content: center;
+    width: 60%;
+    padding: 30px;
+    justify-content: center;
+    flex-direction: column;
+
+    h1 {
+      font-size: 84px;
+
+      font-family: changa;
+      color: #fff;
+      padding: 30px;
+    }
+    h4 {
+      font-size: 30px;
+      font-weight: 200;
+      font-family: changa;
+      color: #fff;
+      padding: 30px;
+    }
+  }
+
+  .head_content-btn {
+    @include flexible;
+    justify-content: center;
+    width: 235px;
+    height: 50px;
+    color: #fff;
+    font-size: 20px;
+    font-family: changa;
+    background: #2091f9;
+    border-radius: 50px;
+    margin: 30px;
+  }
+}
